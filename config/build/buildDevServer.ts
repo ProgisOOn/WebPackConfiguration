@@ -3,6 +3,8 @@ import { BuildOptions } from "./types/types";
 export function buildDevServer(options: BuildOptions): DevServerConfiguration{
     return {
         port: options.port ?? 3000,
-        open: true
+        open: true,
+        // если раздавать статику через nginx То надо будет делать проксирование на index.html
+        historyApiFallback: true,
       }
 }
