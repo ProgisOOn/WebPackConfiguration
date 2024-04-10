@@ -6,19 +6,17 @@ import AvatarPng from '@/assets/graphic.png'
 import AvatarJpg from '@/assets/manJPG.jpg'
 import SaleSVG from '@/assets/Sale.svg'
 
+function TODO(a: number) {
+    console.log(a);
+}
+
 export const App = () => {
     const [state, setState] = useState(0);
 
     const increament = () => setState( prev => prev+1);
     const decreament = () => setState(prev => prev -1);
-
-    if(__PLATFORM__ === 'desktop') {
-        return <div>ISDESKTOPPLATFORM</div>
-    }
-
-    if(__PLATFORM__ ==='mobile') {
-        return <div>ISMOBILEPLATFORM</div>
-    }
+    
+    // TODO("454543");
 
     return (
         <>
@@ -28,7 +26,7 @@ export const App = () => {
             <img width={100} height={100} src={AvatarJpg} alt="" />
         </div>
         <div>
-            <SaleSVG width={100} height={100}/>
+            <SaleSVG width={150} height={150}/>
         </div>
         <Link to={'/about'}>about</Link>
         <br />
